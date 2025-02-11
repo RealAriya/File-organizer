@@ -11,3 +11,7 @@ def organize_files(directory):
 
         if os.path.isdir(file_path) or filename == script_name:
             continue
+
+        # Get the file extension
+        file_extension = os.path.splitext(filename)[1][1:].upper()
+        
