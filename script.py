@@ -24,3 +24,7 @@ def organize_files(directory):
         target_folder = os.path.join(directory, f"{file_extension}_Files")
         if not os.path.exists(target_folder):
             os.makedirs(target_folder)
+
+        # Move the file to the target folder
+        shutil.move(file_path, os.path.join(target_folder, filename))
+        print(f"Moved: {filename} -> {target_folder}")
