@@ -28,3 +28,13 @@ def organize_files(directory):
         # Move the file to the target folder
         shutil.move(file_path, os.path.join(target_folder, filename))
         print(f"Moved: {filename} -> {target_folder}")
+
+    print("File organization complete!")
+
+
+if __name__ == "__main__":
+    
+    folder_path = "."  
+
+    # Call the function to organize files
+    organize_files(folder_path)
