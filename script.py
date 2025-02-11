@@ -1,5 +1,6 @@
 import os
 import shutil
+import sys
 
 def organize_files(directory):
     # Get the name of this script (to avoid moving it)
@@ -34,7 +35,13 @@ def organize_files(directory):
 
 if __name__ == "__main__":
     
-    folder_path = "."  
+    # Dynamic Path Handling
+    if len(sys.argv) > 1:
+        folder_path = sys.argv[1]
+    else:
+        folder_path = "."
 
+    # python3 organize_files.py /path/to/your/directory
+     
     # Call the function to organize files
     organize_files(folder_path)
