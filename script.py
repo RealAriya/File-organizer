@@ -14,4 +14,13 @@ def organize_files(directory):
 
         # Get the file extension
         file_extension = os.path.splitext(filename)[1][1:].upper()
-        
+
+        # Skip if the file has no extension
+        if not file_extension:
+            continue
+
+
+        # Create the target folder if it doesn't exist
+        target_folder = os.path.join(directory, f"{file_extension}_Files")
+        if not os.path.exists(target_folder):
+            os.makedirs(target_folder)
