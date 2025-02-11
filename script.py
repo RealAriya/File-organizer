@@ -8,3 +8,6 @@ def organize_files(directory):
     for filename in os.listdir(directory):
         # Getting full path of the file
         file_path = os.path.join(directory, filename)
+
+        if os.path.isdir(file_path) or filename == script_name:
+            continue
